@@ -1,6 +1,7 @@
 package com.kodewala.streams.filter;
 
 import java.util.Arrays;
+import java.util.Collections;
 import java.util.List;
 import java.util.stream.Collectors;
 
@@ -11,6 +12,11 @@ public class WhenToUseFilter {
 		List<String> randomWords = Arrays.asList("hello", "hi", "noon");
 		List<String> output = randomWords.stream().filter(w -> (w.length() > 3)).collect(Collectors.toList());
 		System.out.println(output);
+
+		// using comparator
+		List<Integer> randomList = Arrays.asList(4, 9, 3, 8, 5);
+		Collections.sort(randomList);
+		System.out.println(randomList);
 	}
 
 }
